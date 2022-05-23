@@ -1,0 +1,17 @@
+ALGORITHM Insertion-sort
+VAR
+    T : ARRAY_OF INTEGER[];
+    i,j, elem : INTEGER;
+
+BEGIN
+    FOR i FROM 1 TO (T.length - 1) STEP 1 DO
+       elem = T[i];
+      FOR j FROM i TO (T[j-1] > elem - 1) STEP (-1) DO
+           T[j] = T[j-1];
+           T[j] = elem;
+      END_FOR
+    END_FOR
+    FOR i FROM 1 TO T.length STEP 1  DO
+      write("Array after insertion sort is", T[i])
+    END_FOR  
+END
